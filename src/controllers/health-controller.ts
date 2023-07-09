@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
-import { asyncHandler } from "@/middleware/async-middleware";
-import { HealthResponse, User } from "@/types/interfaces/interfaces.common";
+import { type Request, type Response, type NextFunction } from 'express'
+import { asyncHandler } from '@/middleware/async-middleware'
+import { type HealthResponse } from '@/types/interfaces/interfaces.common'
 
 // @desc     Gets all users from database
 // @route    /users
@@ -9,10 +9,9 @@ import { HealthResponse, User } from "@/types/interfaces/interfaces.common";
 // ? asyncHandler should be used for every request for easy async handling
 export const getHealthStatus = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
-
-    const healthResponse : HealthResponse = {status: 'UP', message: 'Service is working'};
+    const healthResponse: HealthResponse = { status: 'UP', message: 'Service is working' }
 
     // Return json with success message
-    res.status(200).json(healthResponse);
-  },
-);
+    res.status(200).json(healthResponse)
+  }
+)

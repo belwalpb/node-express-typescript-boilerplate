@@ -1,4 +1,4 @@
 // Example Jest test file
-describe("example", () => {
-  it("should run", () => {});
-});
+describe('example', () => {
+  it('should run', () => {})
+})

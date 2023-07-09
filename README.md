@@ -11,15 +11,6 @@ Most of the useful features are for easier configuration, although there are som
 - Path aliases for cleaner imports
 - Nodemon for refresh on save
 - Setup build script for production; no ts-node for production
-- Security middlewares setup
-- Environment variables configured on load
-
-# Setup
-
-## Environment Variables
-
-1. Copy ```.env.example```, and rename to ```.env```
-2. Configure newly copied ```.env``` file 
 
 ## Development
 > This project was setup using Node.js v18.5. Please use specified version for best experience.
@@ -42,13 +33,13 @@ Every development files are located within the ```./src``` folder.
 ├── config
 │   └── db.ts
 ├── controllers
-│   └── user-controller.ts
+│   └── health-controller.ts
 ├── middleware
 │   ├── async-middleware.ts
 │   ├── auth-middleware.ts
 │   └── error-middleware.ts
 ├── routes
-│   └── user-route.ts
+│   └── health-route.ts
 ├── __tests__
 │   └── example.test.ts
 ├── types
@@ -101,4 +92,3 @@ If you add extra folders to this template and would like to use them with aliase
 2. Add extra paths inside of ```{ paths: ... }``` (for tsconfig-paths)
 3. Go into ```package.json```
 4. Add extra paths inside of ```{_moduleAliases: ... }``` (for production build)
-

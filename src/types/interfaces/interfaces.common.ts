@@ -10,3 +10,9 @@ export interface ApiError extends Error {
 export interface User {
   name: string;
 }
+
+
+export interface HealthResponse {
+  status: string;
+  message: string;
+}
